@@ -35,9 +35,9 @@ namespace FifteenGUI
                     Button button = new Button();
                     button.Dock = DockStyle.Fill;
                     button.Text = "*";
-                    button.Font = new Font("Calibri", 20);
+                    button.Font = new Font("Calibri", 30);
                     button.Tag = i + j * n;
-                    button.Name = "button" + (i + j * n).ToString();
+                    button.Name = "button" + (n * j + i).ToString();
                     button.Click += Button_Click;
                     tableLayoutPanel1.Controls.Add(button, i, j);
                 }
@@ -54,9 +54,9 @@ namespace FifteenGUI
             }
             RefreshButtonField();
             count = 0;
-            CountStatus.Text = count.ToString();
+            CountStatus.Text = count.ToString();//счетчиков ходов
             timeDate = DateTime.Now;
-            timer1.Start();
+            timer1.Start();//таймер времени в игре
         }
 
         private void startMenu_Click(object sender, EventArgs e)
