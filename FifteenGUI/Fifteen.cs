@@ -110,10 +110,11 @@ namespace FifteenGUI
             }
         }
 
-        private void отменаХодаToolStripMenuItem_Click(object sender, EventArgs e)//отмена хода кнопкой BackSpace
+        private void отменаХодаToolStripMenuItem_Click(object sender, EventArgs e)//отмена хода кнопкой а меню
         { 
             Restore();
         }
+
         private void Fifteen_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyValue == 8)//клавиша BackSpace отменяет ход
@@ -125,6 +126,7 @@ namespace FifteenGUI
                 GameStart();
             }
         }
+
         private void Restore()
         {
             if (count > 0)
