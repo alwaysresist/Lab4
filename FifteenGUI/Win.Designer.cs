@@ -1,6 +1,6 @@
 ﻿namespace FifteenGUI
 {
-    partial class Victory
+    partial class Win
     {
         /// <summary>
         /// Required designer variable.
@@ -64,8 +64,8 @@
             this.Name = "Victory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Победа";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Victory_FormClosing);
-            this.Load += new System.EventHandler(this.Victory_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Win_FormClosing);
+            this.Load += new System.EventHandler(this.Win_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

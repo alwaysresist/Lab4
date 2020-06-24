@@ -24,8 +24,12 @@ namespace GameLibrary
         public void Start()
         {
             for (int x = 0; x < size; ++x)//поле field заполнили значениям 1-16
+            {
                 for (int y = 0; y < size; ++y)
+                {
                     field[x, y] = CoordinatesToPosition(x, y) + 1;
+                }
+            }
             _x = size - 1;
             _y = size - 1;
             field[_x, _y] = 0;
@@ -35,8 +39,10 @@ namespace GameLibrary
         {
             int x, y;
             PositionToCoordinates(position, out x, out y);//по параметру position находим координаты x,y той ячейки массива, которую нужно поменять с нулевой ячейкой
-            if (Math.Abs(x - _x) + Math.Abs(y - _y) != 1) 
+            if (Math.Abs(x - _x) + Math.Abs(y - _y) != 1)
+            {
                 return false;
+            }
             GameSave();
             field[_x, _y] = field[x, y];//меняем местами ячейки
             field[x, y] = 0;
@@ -101,7 +107,7 @@ namespace GameLibrary
         
         public bool Check()//проверка завершения игры
         {
-            if (!(_x != 0 && _y != 0))
+            if (!(_x != 0 && _y != 0))//если клетка не последняя, то игра еще не завершена
             {
                 return false;
             }

@@ -75,8 +75,8 @@ namespace FifteenGUI
             }
             if (game.Check())//Завершение игры 
             {
-                Victory victory = new Victory(count, sec);//вывод окна с количеством ходов и временем игры
-                victory.ShowDialog();
+                Win win = new Win(count, sec);//вывод окна с количеством ходов и временем игры
+                win.ShowDialog();
             }
             this.ActiveControl = null;
         }
@@ -121,8 +121,8 @@ namespace FifteenGUI
                 Restore();
             if (e.KeyValue == 20)//capslock быстрая победа
             {
-                Victory victory = new Victory(count, sec); 
-                victory.ShowDialog();
+                Win win = new Win(count, sec); 
+                win.ShowDialog();
                 GameStart();
             }
         }

@@ -97,8 +97,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel3,
             this.toolStripStatusLabel4,
+            this.toolStripStatusLabel3,
             this.toolStripStatusLabel2,
             this.TimeStatus,
             this.toolStripStatusLabel1,

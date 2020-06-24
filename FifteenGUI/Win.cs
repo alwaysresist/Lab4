@@ -12,27 +12,27 @@ using System.Windows.Forms;
 
 namespace FifteenGUI
 {
-    public partial class Victory : Form
+    public partial class Win : Form
     {
         int count;
         TimeSpan time;
-        public Victory(int count, TimeSpan time)
+        public Win(int count, TimeSpan time)
         {
             InitializeComponent();
             this.count = count;
             this.time = time;   
         }
 
-        private void Victory_Load(object sender, EventArgs e)
+        private void Win_Load(object sender, EventArgs e)
         {
             step.Text += count.ToString();
             duration.Text += time.ToString(@"hh\:mm\:ss");
         }
-        private void Victory_FormClosing(object sender, FormClosingEventArgs e)
+        private void Win_FormClosing(object sender, FormClosingEventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
-            result = MessageBox.Show(this, "Начать новую игру?", "Уведомление!", buttons);
+            result = MessageBox.Show(this, "Вы хотите начать новую игру?", "Уведомление.", buttons);
             if (result == DialogResult.Yes) 
             { 
                 e.Cancel = false;
