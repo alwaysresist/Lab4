@@ -48,20 +48,20 @@
             this.duration.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.duration.Location = new System.Drawing.Point(53, 44);
             this.duration.Name = "duration";
-            this.duration.Size = new System.Drawing.Size(95, 33);
+            this.duration.Size = new System.Drawing.Size(157, 33);
             this.duration.TabIndex = 4;
-            this.duration.Text = "Время:";
+            this.duration.Text = "Время игры:";
             // 
-            // Victory
+            // Win
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 261);
+            this.ClientSize = new System.Drawing.Size(384, 261);
             this.Controls.Add(this.duration);
             this.Controls.Add(this.step);
-            this.MaximumSize = new System.Drawing.Size(500, 300);
-            this.MinimumSize = new System.Drawing.Size(500, 300);
-            this.Name = "Victory";
+            this.MaximumSize = new System.Drawing.Size(400, 300);
+            this.MinimumSize = new System.Drawing.Size(400, 300);
+            this.Name = "Win";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Победа";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Win_FormClosing);

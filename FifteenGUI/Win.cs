@@ -27,17 +27,19 @@ namespace FifteenGUI
         {
             step.Text += count.ToString();
             duration.Text += time.ToString(@"hh\:mm\:ss");
+
         }
         private void Win_FormClosing(object sender, FormClosingEventArgs e)
         {
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
             DialogResult result;
-            result = MessageBox.Show(this, "Вы хотите начать новую игру?", "Уведомление.", buttons);
+            result = MessageBox.Show(this, "Начать новую игру?", "Уведомление.", buttons);
             if (result == DialogResult.Yes) 
             { 
                 e.Cancel = false;
             }
-            else Application.Exit();
+            else 
+                Application.Exit();
         }
     }
 }

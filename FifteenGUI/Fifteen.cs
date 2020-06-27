@@ -75,6 +75,7 @@ namespace FifteenGUI
             }
             if (game.Check())//Завершение игры 
             {
+                timer1.Stop();
                 Win win = new Win(count, sec);//вывод окна с количеством ходов и временем игры
                 win.ShowDialog();
             }
@@ -115,18 +116,6 @@ namespace FifteenGUI
             Restore();
         }
 
-        private void Fifteen_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == 8)//клавиша BackSpace отменяет ход
-                Restore();
-            if (e.KeyValue == 20)//capslock быстрая победа
-            {
-                Win win = new Win(count, sec); 
-                win.ShowDialog();
-                GameStart();
-            }
-        }
-
         private void Restore()
         {
             if (count > 0)
@@ -135,21 +124,6 @@ namespace FifteenGUI
                 count--;
                 CountStatus.Text = count.ToString();
                 RefreshButtonField();
-            }
-        }
-
-        private void Fifteen_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            
-            MessageBoxButtons change = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(this, "Вы действительно хотите закрыть приложение?", "Закрыть приложение", change);
-            if (result == DialogResult.No)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                Application.ExitThread();
             }
         }
     }
